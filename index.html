@@ -195,20 +195,13 @@
 
   /* Thumbnails */
   .thumbs {
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    padding: 0.5rem 0 1rem;
-    scrollbar-width: thin;
-    scrollbar-color: var(--periwinkle) transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+    padding: 1rem 0 1.5rem;
   }
 
-  .thumbs::-webkit-scrollbar { height: 4px; }
-  .thumbs::-webkit-scrollbar-thumb { background: var(--periwinkle); border-radius: 2px; }
-
   .thumb {
-    flex: 0 0 auto;
-    width: 80px;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 2px;
@@ -309,7 +302,7 @@ function goTo(n) {
   document.querySelectorAll('.thumb').forEach((t, i) => {
     t.classList.toggle('active', i === n);
   });
-  document.querySelectorAll('.thumb')[n].scrollIntoView({behavior:'smooth', block:'nearest', inline:'nearest'});
+
 }
 
 // Build thumbnails
