@@ -156,6 +156,15 @@
     transform: translateY(-1px);
   }
 
+  .share-btn {
+    background: var(--purple);
+  }
+
+  .share-btn:hover {
+    background: var(--navy);
+    transform: translateY(-1px);
+  }
+
   .download-btn svg {
     width: 16px; height: 16px;
     fill: currentColor;
@@ -273,15 +282,8 @@
     <p>A Roadmap for Defending the Constitution and Empowering the People</p>
   </header>
 
-  <div class="download-bar">
-    <span>Download the full presentation:</span>
-    <a href="https://raw.githubusercontent.com/annabelspark/showup/main/ShowUp2Defend_317.pptx" class="download-btn">
-      <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
-      Download .pptx
-    </a>
-    <button class="download-btn" onclick="document.getElementById('main-page').style.display='none'; document.getElementById('reading-list-page').style.display='block'; window.scrollTo(0,0);">
-      View Reading List
-    </button>
+  <div style="background: var(--magenta); padding: 0.85rem 2rem; text-align: center;">
+    <p style="font-family: 'Source Serif 4', serif; font-style: normal; color: #ffffff; font-size: 1.05rem; letter-spacing: 0.01em;">Show Up. Create a Constitutional Crisis Plan with Your Neighbors. Build a Powerful Network.</p>
   </div>
 
   <div class="viewer">
@@ -294,6 +296,33 @@
       <button class="nav-btn" id="next-btn" onclick="goTo(current + 1)">Next →</button>
     </div>
     <div class="thumbs" id="thumbs"></div>
+  </div>
+
+  <div class="download-bar">
+    <a href="https://raw.githubusercontent.com/annabelspark/showup/main/ShowUp2Defend_317.pptx" class="download-btn">
+      <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+      Download .pptx
+    </a>
+    <button class="download-btn" onclick="document.getElementById('main-page').style.display='none'; document.getElementById('reading-list-page').style.display='block'; window.scrollTo(0,0);">
+      Reading List
+    </button>
+    <span style="color: rgba(255,255,255,0.7); font-family: 'Source Serif 4', serif; font-size: 0.9rem; letter-spacing: 0.05em; padding: 0 0.25rem;">Share:</span>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshowup2defend.com" target="_blank" class="download-btn share-btn">
+      <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      Facebook
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshowup2defend.com&text=A+free+civic+organizing+toolkit+for+defending+the+Constitution.+Share+it+with+your+neighbors.+%23ShowUp2Defend+%23DefendTheConstitution+%23PatrioticAct" target="_blank" class="download-btn share-btn">
+      <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X
+    </a>
+    <a href="https://bsky.app/intent/compose?text=Show+Up+to+Defend+the+Constitution+%E2%80%94+a+free+civic+organizing+toolkit+for+neighborhood+gatherings.+showup2defend.com+%23ShowUp2Defend+%23DefendTheConstitution+%23PatrioticAct" target="_blank" class="download-btn share-btn">
+      <svg viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.204-.659-.299-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
+      Bluesky
+    </a>
+    <a href="mailto:?subject=Show%20Up%20to%20Defend%20the%20Constitution&body=A%20free%20civic%20organizing%20toolkit%20for%20neighborhood%20gatherings.%0A%0Ahttps%3A%2F%2Fshowup2defend.com" class="download-btn share-btn">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      Email
+    </a>
   </div>
 
 </div>
